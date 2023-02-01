@@ -1,7 +1,6 @@
 package uic.api_solicitud_respuesta.subir_anteproyecto;
 import java.util.Date;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,18 +13,20 @@ public class SubirAnteproyecto {
  @Id
  @GeneratedValue(strategy = GenerationType.AUTO)
  private Long id;
-//  private String convocatoria;
+
  private String titulo;
  private Date fecha_solicitud;
  private Date fecha_respuesta;
  
- private String docente_asignado;
- private boolean estado;
- private String observacion;
 
  private String solicitud_doc;
  private String anteproyecto_doc;
-}
+
+ //RealeationShips estado,observacion, docente_asignado
+ 
+
+ }
+
 
 
 

@@ -1,7 +1,5 @@
 package uic.api_solicitud_respuesta.Descarga_anteproyecto;
 
-import java.sql.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,12 +12,8 @@ public class DescargaAnteproyecto {
  @Id
  @GeneratedValue(strategy = GenerationType.AUTO)
  private Long id;
- private String convocatoria;
- private Integer cedula;
- private String estudiante;
- private String carrera;
- private String tema;
- private Date fecha_entrega_anteproyecto;
- private String Observacion;
- private Boolean estado;
+
+//RealeationShips
+ private String solicitud_doc;
+ private String anteproyecto_doc;
 }

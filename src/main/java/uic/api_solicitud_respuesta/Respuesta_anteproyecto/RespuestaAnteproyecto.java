@@ -13,12 +13,13 @@ import lombok.Data;
 public class RespuestaAnteproyecto {
  @Id
  @GeneratedValue(strategy = GenerationType.AUTO)
- private Long id;
- private String convocatoria;
- private Integer cedula;
- private String estudiante;
- private String tema;
- private Date fecha_entrega_anteproyecto;
- private String Observacion;
- private Boolean estado;
+
+ private Date fecha_solicitud;
+ private Date fecha_respuesta;
+ private boolean estado;
+ private String observacion;
+ private String docente_asignado;
+
+ //RealeationShip titulo y documentos
+
 }
