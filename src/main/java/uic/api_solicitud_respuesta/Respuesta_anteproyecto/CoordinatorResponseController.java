@@ -14,36 +14,36 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("api/respuestaAnteproyecto")
+@RequestMapping("api/coordinatorResponse")
 @CrossOrigin({"*"})
-public class RespuestaAnteproyectoController {
+public class CoordinatorResponseController {
 
- @Autowired RespuestaAnteproyectoService respuestaAnteproyectoService;
+ @Autowired CoordinatorResponseService coordinatorResponseService;
 
  @GetMapping("/")
- public List<RespuestaAnteproyecto> findAll(){
- return respuestaAnteproyectoService.findAll();
+ public List<CoordinatorResponse> findAll(){
+ return coordinatorResponseService.findAll();
  }
  
  @GetMapping("/{id}/")
- public RespuestaAnteproyecto findById(@PathVariable Long id){
- return respuestaAnteproyectoService.findById(id);
+ public CoordinatorResponse findById(@PathVariable Long id){
+ return coordinatorResponseService.findById(id);
  }
 
  @PostMapping("/")
- public RespuestaAnteproyecto save(@RequestBody RespuestaAnteproyecto entity){
- return respuestaAnteproyectoService.save(entity);
+ public CoordinatorResponse save(@RequestBody CoordinatorResponse entity){
+ return coordinatorResponseService.save(entity);
  }
  
 
  @PutMapping("/")
- public RespuestaAnteproyecto update(@RequestBody RespuestaAnteproyecto entity){
- return respuestaAnteproyectoService.save(entity);
+ public CoordinatorResponse update(@RequestBody CoordinatorResponse entity){
+ return coordinatorResponseService.save(entity);
  }
 
  @DeleteMapping("/{id}/")
  public void deleteById(@PathVariable Long id){
-   respuestaAnteproyectoService.deleteById(id);
+   coordinatorResponseService.deleteById(id);
  }
 
 }
