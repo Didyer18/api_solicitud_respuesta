@@ -1,4 +1,4 @@
-package uic.api_solicitud_respuesta.Respuesta_anteproyecto;
+package uic.api_solicitud_respuesta.observaciones;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,23 +21,23 @@ public class CoordinatorResponseController {
  @Autowired CoordinatorResponseService coordinatorResponseService;
 
  @GetMapping("/")
- public List<CoordinatorResponse> findAll(){
+ public List<ObservacionesEntity> findAll(){
  return coordinatorResponseService.findAll();
  }
  
  @GetMapping("/{id}/")
- public CoordinatorResponse findById(@PathVariable Long id){
+ public ObservacionesEntity findById(@PathVariable Long id){
  return coordinatorResponseService.findById(id);
  }
 
  @PostMapping("/")
- public CoordinatorResponse save(@RequestBody CoordinatorResponse entity){
+ public ObservacionesEntity save(@RequestBody ObservacionesEntity entity){
  return coordinatorResponseService.save(entity);
  }
  
 
  @PutMapping("/")
- public CoordinatorResponse update(@RequestBody CoordinatorResponse entity){
+ public ObservacionesEntity update(@RequestBody ObservacionesEntity entity){
  return coordinatorResponseService.save(entity);
  }
 

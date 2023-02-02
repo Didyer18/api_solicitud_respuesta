@@ -1,4 +1,4 @@
-package uic.api_solicitud_respuesta.subir_anteproyecto;
+package uic.api_solicitud_respuesta.solicitud;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,23 +21,23 @@ public class SubirAnteproyectoController {
  @Autowired SubirAnteproyectoService subirAnteproyectoService;
 
  @GetMapping("/")
- public List<SubirAnteproyecto> findAll(){
+ public List<SolicitudEntity> findAll(){
  return subirAnteproyectoService.findAll();
  }
  
  @GetMapping("/{id}/")
- public SubirAnteproyecto findById(@PathVariable Long id){
+ public SolicitudEntity findById(@PathVariable Long id){
  return subirAnteproyectoService.findById(id);
  }
 
  @PostMapping("/")
- public SubirAnteproyecto save(@RequestBody SubirAnteproyecto entity){
+ public SolicitudEntity save(@RequestBody SolicitudEntity entity){
  return subirAnteproyectoService.save(entity);
  }
  
 
  @PutMapping("/")
- public SubirAnteproyecto update(@RequestBody SubirAnteproyecto entity){
+ public SolicitudEntity update(@RequestBody SolicitudEntity entity){
  return subirAnteproyectoService.save(entity);
  }
 
